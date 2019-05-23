@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0.73)), url("https://procudan.dk/wp-content/uploads/2015/11/iStock_000026605352_Full.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
