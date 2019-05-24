@@ -1,7 +1,7 @@
 <h1><%= @cocktail.name %></h1>
 
 <div class="card-product text-right">
-  <img src="">
+  <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @cocktail.photo %>)"></div>
   <div class="card-product-infos">
     <ul>
       <% @cocktail.doses.each do |dose| %>
@@ -11,5 +11,3 @@
     <p><%= link_to "add a dose", new_cocktail_dose_path(@cocktail) %></p>
   </div>
 </div>
-
-g
