@@ -40,9 +40,9 @@ Ingredient.create!(name: "watermelon")
 Ingredient.create!(name: "melon")
 
 puts "creating cocktails"
-Cocktail.create!(name: "trial")
+Cocktail.create!(name: "Virgin cuba libre")
 
 puts "creating doses"
-Dose.create!(description: "trial", cocktail_id: Cocktail.first.id, ingredient_id: Ingredient.first.id)
+Dose.create!(description: "all", cocktail_id: Cocktail.first.id, ingredient_id: Ingredient[11].id)
 
 puts "finished"
