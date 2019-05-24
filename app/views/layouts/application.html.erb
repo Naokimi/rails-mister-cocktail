@@ -12,11 +12,13 @@
 </head>
 
 <body>
-  <%= render "shared/navbar" %>
-  <div class="container p-5">
-    <%= yield %>
+  <div class="d-flex justify-content-between flex-column">
+    <%= render "shared/navbar" %>
+    <div class="container p-5 flex-grow-1" style="min-height: 78vh">
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
   </div>
-  <%= render "shared/footer" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_pack_tag "application" %>
 </body>

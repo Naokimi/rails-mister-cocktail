@@ -41,7 +41,7 @@ Ingredient.create!(name: "melon")
 
 puts "creating cocktails"
 url = "https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/2HqZxjJ/videoblocks-cola-with-ice-close-up-for-a-very-large-glass-of-cold-coke-with-ice-cubes-rotation_sm8lm4k7cg_thumbnail-full01.png"
-cocktail = Cocktail.new(name: "Virgin cuba libre")
+cocktail = Cocktail.new(name: "Virgin Cuba Libre")
 cocktail.remote_photo_url = url
 cocktail.save!
 url = "https://www.tablespoon.com/-/media/Images/Articles/Images-for-Posts-PrePandoNext/2016/12/non-alcoholic-pineapple-orange-sherbert-punch.jpg?la=en"
