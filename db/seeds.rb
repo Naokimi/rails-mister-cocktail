@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroying database"
-Ingredient.destroy_all
 Cocktail.destroy_all
 Dose.destroy_all
+Ingredient.destroy_all
 
 puts "creating ingredients"
 
@@ -45,7 +45,7 @@ cocktail = Cocktail.new(name: "Virgin cuba libre")
 cocktail.remote_photo_url = url
 cocktail.save!
 url = "https://www.tablespoon.com/-/media/Images/Articles/Images-for-Posts-PrePandoNext/2016/12/non-alcoholic-pineapple-orange-sherbert-punch.jpg?la=en"
-cocktail = Cocktail.new(name: "Pineapple-Orange Sherbert Punch")
+cocktail = Cocktail.new(name: "Pineapple-Orange Sherbert")
 cocktail.remote_photo_url = url
 cocktail.save!
 url = "https://www.tablespoon.com/-/media/Images/Articles/Images-for-Posts-PrePandoNext/2016/12/non-alcoholic-pineapple-ginger-sparkler.jpg?la=en"
@@ -58,6 +58,7 @@ cocktail.remote_photo_url = url
 cocktail.save!
 
 puts "creating doses"
-Dose.create!(description: "all", cocktail_id: Cocktail.first.id, ingredient_id: Ingredient.find(12).id)
+Dose.create!(description: "1", cocktail_id: Cocktail.first.id, ingredient_id: Ingredient.find_by_name("coke").id)
+Dose.create!(description: "1", cocktail_id: Cocktail.first.id, ingredient_id: Ingredient.find_by_name("ice").id)
 
 puts "finished"
